@@ -70,6 +70,9 @@ Real-time monitoring on the backend VM shows the WAF's Health Probes (10.0.1.x) 
 
         Access the WAF Public IP and attempt an SQLi attack.
 
+
+---
+
 👤 Author
 
 Dante Manríquez Riquelme
