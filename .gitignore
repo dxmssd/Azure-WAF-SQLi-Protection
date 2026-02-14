@@ -1,17 +1,7 @@
-# Ignorar la carpeta de plugins y módulos
 .terraform/
-
-# Ignorar los archivos de estado (ESTO ES CRÍTICO)
-# Estos archivos contienen toda la info de tu infra, incluyendo contraseñas en texto plano
 *.tfstate
 *.tfstate.backup
-
-# Ignorar el archivo de variables sensibles (si llegas a crear uno)
 *.tfvars
 *.tfvars.json
-
-# Ignorar el archivo de log de Terraform
 crash.log
-
-# Ignorar el archivo de lock
 .terraform.lock.hcl
