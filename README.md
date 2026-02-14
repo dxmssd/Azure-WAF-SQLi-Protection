@@ -1,5 +1,6 @@
-Azure WAF: SQL Injection Protection & Perimeter Security
-Project Overview
+#zure WAF: SQL Injection Protection & Perimeter Security
+
+##Project Overview
 This project demonstrates a professional-grade security architecture deployed on Microsoft Azure using Terraform (IaC). The core objective is to protect a web application (DVWA) hosted in a private environment from common web vulnerabilities, specifically SQL Injection (SQLi), by implementing an Application Gateway with Web Application Firewall (WAF v2).
 Key Features
 
