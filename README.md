@@ -1,6 +1,6 @@
-#zure WAF: SQL Injection Protection & Perimeter Security
+# zure WAF: SQL Injection Protection & Perimeter Security
 
-##Project Overview
+## Project Overview
 This project demonstrates a professional-grade security architecture deployed on Microsoft Azure using Terraform (IaC). The core objective is to protect a web application (DVWA) hosted in a private environment from common web vulnerabilities, specifically SQL Injection (SQLi), by implementing an Application Gateway with Web Application Firewall (WAF v2).
 Key Features
 
@@ -9,14 +9,18 @@ Key Features
 - Zero Trust Management: Administrative access is restricted via Azure Bastion (no public SSH/RDP exposure).
 - Network Segmentation: Isolated subnets for Gateway (WAF), Backend (Application), and Management (Bastion).
 
-Technical Architecture
+---
+
+## Technical Architecture
 
 The infrastructure follows a multi-tier security design:
 - Public Layer: Application Gateway (WAF) with a dedicated Public IP.
 - Management Layer: Azure Bastion service for secure administrative access.
 - Private Layer: Ubuntu 22.04 VM running DVWA inside a Docker container, reachable only through the WAF or Bastion.
 
- Tech Stack
+---
+
+ ## Tech Stack
 
 - Cloud Provider: Microsoft Azure
 - IaC Tool: Terraform
@@ -25,9 +29,11 @@ The infrastructure follows a multi-tier security design:
 - Operating Systems: Ubuntu 22.04 LTS (Server) / CachyOS (Local Admin)
 - Networking: Azure VNET, Subnets, and Network Security Groups (NSG)
 
-Security Validation & Proof of Concept (PoC)
-The Challenge
+---
 
+## Security Validation & Proof of Concept (PoC)
+
+The Challenge
 The Damn Vulnerable Web App (DVWA) is intentionally vulnerable to SQL Injection. Without protection, a simple payload like ' OR '1'='1 would expose the entire database.
 The Defense (WAF in Action)
 
@@ -40,11 +46,13 @@ With the WAF configured in Prevention Mode, every request is inspected.
 <img width="916" height="1055" alt="image" src="https://github.com/user-attachments/assets/d4132c87-e021-4a57-8e87-bf1f614031ca" />
 
 
-
-Monitoring & Logs
+---
+## Monitoring & Logs
 
 Real-time monitoring on the backend VM shows the WAF's Health Probes (10.0.1.x) constantly verifying the application's health, while external malicious attempts are absent from the local access logs.
-How to Run
+
+----
+## How to Run
 
     Provision Infrastructure:
     Bash
