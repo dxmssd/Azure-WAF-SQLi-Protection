@@ -1,7 +1,7 @@
 import requests
 
 # Replace with your WAF public IP
-WAF_IP = "20.110.181.109"
+WAF_IP = "xx.xxx.xxx.xx"
 TARGET_URL = f"http://{WAF_IP}/vulnerabilities/sqli/"
 
 # List of attack payloads (common SQL Injection payloads)
