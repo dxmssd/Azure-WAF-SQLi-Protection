@@ -44,7 +44,7 @@ With the WAF configured in Prevention Mode, every request is inspected.
 - Result: The attack was dropped at the perimeter. Zero malicious traffic reached the backend VM.
 - Status: 403 Forbidden - Microsoft-Azure-Application-Gateway/v2
 
-![WAF Test Results](path_to_your_image/image_9101da.png)
+![WAF Page Results](screenshot/page_403.png)
 
 ---
 ## Monitoring & Logs
@@ -81,7 +81,7 @@ To validate the WAF's effectiveness, I developed a custom **Python stress-test s
 * **Efficiency:** 100%
 * **Response Received:** 403 Forbidden (Filtered by Azure Application Gateway)
 
-![WAF Test Results](path_to_your_image/image_9101da.png)
+![WAF Test Results](screenshot/results_script.png)
 
 ---
 
