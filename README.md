@@ -43,8 +43,8 @@ With the WAF configured in Prevention Mode, every request is inspected.
 - WAF Response: The Application Gateway intercepted the malicious pattern and immediately returned a 403 Forbidden error.
 - Result: The attack was dropped at the perimeter. Zero malicious traffic reached the backend VM.
 - Status: 403 Forbidden - Microsoft-Azure-Application-Gateway/v2
-<img width="916" height="1055" alt="image" src="https://github.com/user-attachments/assets/d4132c87-e021-4a57-8e87-bf1f614031ca" />
 
+![WAF Test Results](path_to_your_image/image_9101da.png)
 
 ---
 ## Monitoring & Logs
@@ -70,6 +70,18 @@ Real-time monitoring on the backend VM shows the WAF's Health Probes (10.0.1.x) 
 
         Access the WAF Public IP and attempt an SQLi attack.
 
+
+---
+## 🧪 Automated Security Testing
+To validate the WAF's effectiveness, I developed a custom **Python stress-test script** that executes various SQL Injection payloads.
+
+### Test Results:
+* **Total Attacks Simulated:** 66
+* **Successful Blocks:** 66
+* **Efficiency:** 100%
+* **Response Received:** 403 Forbidden (Filtered by Azure Application Gateway)
+
+![WAF Test Results](path_to_your_image/image_9101da.png)
 
 ---
 
